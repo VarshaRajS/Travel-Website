@@ -9,6 +9,17 @@
     text-decoration-color: rgb(221, 177, 96);
 
 }
+
+.card {
+    transition: transform 0.3s ease; /* Smooth transition for the transformation */
+}
+
+.card.enlarge {
+    transform: scale(1.1); /* Scale the card to 110% of its original size */
+    z-index: 10; /* Bring the card to the front */
+}
+
+
 .heading:hover{
     color:rgb(3, 3, 175);
 }
