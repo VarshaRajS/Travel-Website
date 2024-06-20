@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "Discover the beauty of Chikkamagaluru with our special offers!"
     ];
 
+    const notificationSound = document.getElementById('notification-sound');
+
     function displayRandomNotification() {
         const randomIndex = Math.floor(Math.random() * notifications.length);
         const notificationMessage = notifications[randomIndex];
@@ -23,6 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const notificationContainer = document.getElementById('notification-container');
         notificationContainer.textContent = notificationMessage;
         notificationContainer.classList.add('show');
+
+        // Play the notification sound
+        notificationSound.play();
 
         setTimeout(() => {
             notificationContainer.classList.remove('show');
@@ -34,6 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Show the first notification immediately on page load
     displayRandomNotification();
+});
+
 });
 
 
