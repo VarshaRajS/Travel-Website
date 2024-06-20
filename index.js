@@ -7,6 +7,12 @@ knowMoreButtons.forEach(button => {
   });
 });
 
+// JavaScript: Page Load Alert
+window.addEventListener('load', function() {
+  alert('Welcome to Fun-Cations! Explore our best offers and enjoy your trip!');
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const notifications = [
         "Book your trip to Goa now and get a 20% discount!",
@@ -16,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
         "Discover the beauty of Chikkamagaluru with our special offers!"
     ];
 
-    const notificationSound = document.getElementById('notification-sound');
 
     function displayRandomNotification() {
         const randomIndex = Math.floor(Math.random() * notifications.length);
@@ -25,9 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const notificationContainer = document.getElementById('notification-container');
         notificationContainer.textContent = notificationMessage;
         notificationContainer.classList.add('show');
-
-        // Play the notification sound
-        notificationSound.play();
 
         setTimeout(() => {
             notificationContainer.classList.remove('show');
