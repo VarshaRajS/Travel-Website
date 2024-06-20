@@ -12,6 +12,15 @@
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha364-Zenh67qX5JnK2Jl0vWa6Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <style>
+    .card {
+    transition: transform 0.3s ease; /* Smooth transition for the transformation */
+}
+
+.card.enlarge {
+    transform: scale(1.1); /* Scale the card to 110% of its original size */
+    z-index: 10; /* Bring the card to the front */
+}
+
     .navbar-brand{
         font-family: 'Dancing Script', cursive;
         font-size: 160%;
